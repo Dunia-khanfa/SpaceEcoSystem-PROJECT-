@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SpaceEco - Log Waste</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <link rel="stylesheet" href="../CSS/style.css"> 
+</head> 
+<body class="log-page"> 
+<header> 
+    <div class="logo"> 
+        <i class="fas fa-recycle"></i> 
+        <span>SpaceEco System</span> 
+    </div> 
+    <div class="user-info"> 
+        Welcome, <span id="currentUser">Guest</span> <i class="fas fa-user-astronaut"></i> 
+    </div> 
+</header> 
+<nav> 
+    <ul> 
+        <li><a href="../index.html">Home</a></li> 
+        <li><a href="Tips & Info.html">Tips & Info</a></li> 
+        <li><a href="Waste managment.html">Waste Management</a></li> 
+        <li><a href="Log Waste.html" class="active">Log Waste</a></li> 
+        <li><a href="tracking.php">Tracking</a></li> 
+    </ul> 
+</nav> 
+<div class="page-layout"> 
+    <main class="main-content"> 
+        <section class="content-header"> 
+            <h2 class="section-title">Log New Waste</h2> 
+            <p>Enter the details of the waste collected for processing.</p> 
+        </section> 
+        <div class="card shadow-sm mt-4" style="max-width: 600px; margin: 0 auto;"> 
+            <div class="card-header bg-success text-white"> 
+                <h5 class="mb-0"><i class="fas fa-edit"></i> Data Entry Form</h5> 
+            </div> 
+            <div class="card-body"> 
+                <form id="wasteForm" action="db-process-log.php" method="POST"> 
+                    <div class="mb-3"> 
+                        <label for="wasteDate" class="form-label">Date</label> 
+                        <input type="date" name="waste_date" class="form-control" id="wasteDate" required> 
+                    </div> 
+                    <div class="mb-3"> 
+                        <label for="wasteType" class="form-label">Waste Type</label> 
+                        <select name="waste_type" class="form-select" id="wasteType" required> 
+                            <option value="" selected disabled>Select type...</option> 
+                            <option value="Plastic">Plastic</option> 
+                            <option value="Paper">Paper / Cardboard</option> 
+                            <option value="Organic">Organic / Food</option> 
+                            <option value="Chemical">Chemical / Hazardous</option> 
+                            <option value="Metal">Metal / Parts</option> 
+                        </select> 
+                    </div> 
+                    <div class="mb-3"> 
+                        <label for="wasteWeight" class="form-label">Weight (kg)</label> 
+                        <input type="number" step="0.1" name="weight_kg" class="form-control" id="wasteWeight" required> 
+                    </div> 
+                    <div class="mb-3"> 
+                        <label for="wasteNotes" class="form-label">Notes (Optional)</label> 
+                        <textarea name="notes" class="form-control" id="wasteNotes" rows="2"></textarea> 
+                    </div> 
+                    <button type="submit" class="btn-save-waste">Save Waste</button> 
+                </form> 
+            </div> 
+        </div> 
+    </main> 
+    <aside> 
+        <h3>ℹ️ Instructions</h3> 
+        <ul class="list-unstyled"> 
+            <li class="mb-3"> <i class="fas fa-check text-success"></i> <strong>Verify Weight:</strong> Ensure the scale is calibrated to zero gravity. </li> 
+            <li class="mb-3"> <i class="fas fa-check text-success"></i> <strong>Safety:</strong> Do not log hazardous materials without a supervisor. </li> 
+        </ul> 
+        <div class="alert alert-info mt-3"> <small>Data is automatically synced to the Tracking Dashboard.</small> </div> 
+    </aside> 
+</div> 
+<footer> 
+    <div class="footer-content"> 
+        <p>&copy; 2025 SpaceEco - Created by Roie, Reut & Dunia</p> 
+    </div> 
+</footer> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="../JS/main.js"></script> 
+<script src="../JS/log_waste.js"></script> 
+</body> 
+</html>

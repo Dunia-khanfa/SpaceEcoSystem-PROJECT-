@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceEco - Tips & Knowledge Base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body class="tips-page">
+    <header>
+        <div class="logo">
+            <i class="fas fa-recycle"></i>
+            <span>SpaceEco System</span>
+        </div>
+        <div class="user-info">
+            Welcome, <span id="currentUser">Guest</span> <i class="fas fa-user-astronaut"></i>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Tips & Info.html" class="active">Tips & Info</a></li>
+            <li><a href="Waste managment.html">Waste Management</a></li>
+            <li><a href="Log Waste.html">Log Waste</a></li>
+            <li><a href="tracking.php">Tracking</a></li>
+        </ul>
+    </nav>
+    <div class="page-layout">
+        <main class="main-content">
+            <section class="content-header mb-4">
+                <h2 class="section-title">Operational Guidelines & Protocols</h2>
+                <p class="text-muted">Standard Operating Procedures (SOP) for waste handling and environmental safety aboard the ISS.</p>
+            </section>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="text-primary"><i class="fas fa-tint me-2"></i> Water Recovery System (WRS)</h5>
+                            <p class="small text-muted">Critical for station sustainability.</p>
+                            <ul class="list-group list-group-flush small">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i><strong>Condensate:</strong> Ensure air conditioning vents are clear to capture humidity.</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i><strong>Urine Processing:</strong> Do not flush chemicals or wipes into the liquid waste system.</li>
+                                <li class="list-group-item"><i class="fas fa-exclamation-circle text-warning me-2"></i><strong>Leaks:</strong> Report any free-floating liquid immediately to prevent circuit damage.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="text-danger"><i class="fas fa biohazard me-2"></i> Hazardous Materials</h5>
+                            <p class="small text-muted">Batteries, Chemicals, and Biologicals.</p>
+                            <ul class="list-group list-group-flush small">
+                                <li class="list-group-item"><i class="fas fa-battery-empty me-2"></i><strong>Batteries:</strong> Tape terminals before disposal to prevent short circuits and fires.</li>
+                                <li class="list-group-item"><i class="fas fa-vial me-2"></i><strong>Chemical Wipes:</strong> Seal in "Ziploc-Double" bags to contain fumes.</li>
+                                <li class="list-group-item"><i class="fas fa-radiation me-2"></i><strong>Sharps:</strong> Use the rigid red containers only. Never force items in.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-3"><i class="fas fa-eye me-2"></i> Visual Training Modules</h4>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="media-holder shadow-sm p-2 bg-white rounded">
+                        <h6 class="text-muted mb-2 ps-2">Zero-G Debris Containment</h6>
+                        <video autoplay loop muted playsinline class="img-fluid rounded" style="width: 100%; height: 250px; object-fit: cover;">
+                            <source src="../gift/7170788-uhd_2160_4096_25fps.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="p-2 small text-muted"> Demonstration of floating debris collection using air currents. </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media-holder shadow-sm p-2 bg-white rounded">
+                        <h6 class="text-muted mb-2 ps-2">Compactor Operation</h6>
+                        <div style="height: 250px; background: #e9ecef; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                            <div class="text-center text-muted">
+                                <i class="fas fa-cogs fa-3x mb-2"></i><br> Manual Compression Technique<br> (Video Loading...)
+                            </div>
+                        </div>
+                        <div class="p-2 small text-muted"> Proper usage of the manual trash compactor to save volume. </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-3"><i class="fas fa-question-circle me-2"></i> Frequently Asked Questions</h4>
+            <div class="accordion shadow-sm" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"> How do I dispose of wet food pouches? </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small"> Food pouches must be completely emptied if possible. If residue remains, place the pouch in the <strong>K-BAR (Wet Trash)</strong> liner. Do not place in the dry compactor as it may rot and create methane gas. </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"> What if a waste bag rips? </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body small"> Stop immediately. Activate the local air scrubber. Capture any floating debris with tape. Place the ripped bag inside a larger "Overpack" bag and seal it with gray tape. Log the incident in the Tracking tab. </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <div class="system-alerts-box">
+                <h3 class="h5 mb-3 border-bottom pb-2"><i class="fas fa-broadcast-tower text-primary"></i> Learning Hub</h3>
+                <div class="audio-module p-3 rounded mb-4 bg-light border">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-headphones-alt me-2 text-primary"></i>
+                        <span style="font-size: 0.9rem; font-weight: bold;">Daily Briefing: Debris</span>
+                    </div>
+                    <audio id="stationAudio" controls style="width: 100%;">
+                        <source src="../Audio/ttsreader_space-is-n.wav" type="audio/wav">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+                <h5 class="h6 mt-4">📞 Emergency Comms</h5>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i> <strong>Houston:</strong> Ch. 142.55</li>
+                    <li class="mb-2"><i class="fas fa-user-shield text-danger me-2"></i> <strong>Safety Officer:</strong> Ext. 99</li>
+                </ul>
+                <div class="daily-tip mt-4">
+                    <i class="fas fa-lightbulb"></i> <strong>Tip of the Day:</strong> Label every bag with the date and contents before sealing. Unlabeled bags will be rejected by the cargo ship.
+                </div>
+                <div class="mt-4 text-center">
+                    <button class="btn btn-outline-primary w-100 btn-sm" data-bs-toggle="tooltip" title="Syncing with Earth Server...">
+                        <i class="fas fa-download me-1"></i> Download PDF Manual
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 SpaceEco - Created by Roie, Reut & Dunia</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/Tips & Info2.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management - SpaceEco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        .brick-section { padding: 40px 0; }
+        .brick-container { display: flex; align-items: center; gap: 30px; max-width: 1100px; margin: auto; padding: 20px; }
+        .brick-content { flex: 1; text-align: left; }
+        .brick-media { flex: 1; }
+        .brick-media img { width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); height: 350px; object-fit: cover; }
+        .brick-label { color: #007bff; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 5px; }
+        .modal-header { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-recycle"></i>
+            <span>SpaceEco System</span>
+        </div>
+        <div class="user-info">
+            Welcome, <span id="currentUser">Guest</span> <i class="fas fa-user-astronaut"></i>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Tips & Info.html">Tips & Info</a></li>
+            <li><a href="Waste managment.html" class="active">Waste Management</a></li>
+            <li><a href="Log Waste.html">Log Waste</a></li>
+            <li><a href="tracking.php">Tracking</a></li>
+        </ul>
+    </nav>
+    <div class="container mt-4">
+        <section class="brick-section">
+            <div class="brick-container">
+                <div class="brick-content">
+                    <span class="brick-label">Category 01</span>
+                    <h2>Wet Waste & Food</h2>
+                    <p>Organic waste poses a biological hazard in closed environments. All food scraps and wet wipes must be sealed in Green-Label moisture-proof bags (K-BAR) immediately to prevent bacterial growth and odors.</p>
+                    <div class="alert alert-success d-inline-block">
+                        <i class="fas fa-check-circle"></i> Double-seal required
+                    </div>
+                </div>
+                <div class="brick-media">
+                    <img src="https://kelvinindia.in/blog/wp-content/uploads/2023/02/MACHINE-1-1024x887.jpg" alt="Organic Waste Handling">
+                </div>
+            </div>
+        </section>
+        <section class="brick-section">
+            <div class="brick-container">
+                <div class="brick-content">
+                    <span class="brick-label">Category 02</span>
+                    <h2>Dry Waste & Packaging</h2>
+                    <p>Packaging materials, paper, and foam must be flattened to conserve volume. Use the Manual Compactor in Node 2 before placing items in the Blue-Label bins.</p>
+                </div>
+                <div class="brick-media">
+                    <img src="https://images.stockcake.com/public/4/8/0/480fdd98-9e02-4010-a547-2779f4d7492e_large/office-recycling-bins-stockcake.jpg" alt="Recycling Bins">
+                </div>
+            </div>
+        </section>
+        <section class="brick-section">
+            <div class="brick-container">
+                <div class="brick-content">
+                    <span class="brick-label text-danger">Category 03 - Critical</span>
+                    <h2>Hazardous Materials</h2>
+                    <p>Batteries, chemical wipes, and unknown fluids are classified as hazardous. These must be transported immediately to the specialized containment unit in Laboratory Sector 4.</p>
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#safetyModal">View Safety Protocol</button>
+                </div>
+                <div class="brick-media">
+                    <img src="https://i.guim.co.uk/img/media/d710b01e8ad29f717a2979d0188276f25e04469a/69_0_1861_1117/master/1861.jpg?width=465&dpr=1&s=none&crop=none" alt="Hazardous Debris">
+                </div>
+            </div>
+        </section>
+        <section class="brick-section">
+            <div class="brick-container">
+                <div class="brick-content">
+                    <span class="brick-label">Category 04</span>
+                    <h2>Electronic Waste</h2>
+                    <p>Broken PCBs, wires, and sensors. Store small electronics in anti-static bags. Large components must be logged in the inventory system and secured in the cargo bay.</p>
+                </div>
+                <div class="brick-media">
+                    <img src="https://www.sierraclub.org/sites/default/files/styles/sierra_full_page_width/public/2024-12/sierra-beiser-excerpt-1-wb.jpg.webp?itok=aA_0XnJC" alt="Electronic Waste Repair">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="safetyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-exclamation-triangle"></i> Hazardous Materials Protocol</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Standard Operating Procedure:</h6>
+                    <ul class="text-start">
+                        <li>Wear protective gloves and eye-gear before handling.</li>
+                        <li>Do not open leaking containers.</li>
+                        <li>Place item in a double-sealed Red Bin.</li>
+                        <li>Log the specific chemical or component type in the "Log Waste" page.</li>
+                        <li>Notify Mission Control if a spill occurs.</li> </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content text-center py-3">
+            <p>&copy; 2026 SpaceEco - Created by Roie, Reut & Dunia</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js"></script>
+</body>
+</html>
