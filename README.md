@@ -20,6 +20,9 @@ This project was developed as part of the Information Systems B.Sc. program at *
 * **Backend:** PHP.
 * **Database:** MySQL.
 
+Directory: gift
+This folder is designed for video assets. Note that the primary video file (exceeding 25MB) is hosted on the cPanel server to bypass GitHub's upload limitations. The system remains fully functional as the HTML video tag points directly to the server-hosted resource.
+
 ## 🎓 Contributors
 * **Dunia Khanfa**
 * **Roie & Reut**
